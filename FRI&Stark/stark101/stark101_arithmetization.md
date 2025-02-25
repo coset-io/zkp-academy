@@ -156,7 +156,7 @@ $$
 - Reed Solomon Code
   
   - RS码是一类 $[n, \rho, d]$-线性码，早在1960年提出，名为“Polynomial code over Certain Finite Field”。
-  - 定义： $C=\set{(p(a_0), p(a_2), \dots,p(a_{n-1}))|p\text{ is a polynomial over } \mathbb{F}_p\text{ of order } <k}$
+  - 定义： $C=\set{(p(a_0), p(a_1), \dots,p(a_{n-1}))|p\text{ is a polynomial over } \mathbb{F}_p\text{ of order } <k}$
   - 本质上它编码的消息是任意次数小于 $k$ 的单变量多项式 $f(X)=\sum_{i=0}^{k-1}{f_iX^i}$ ，码字是这个多项式在一个有限集合 $\set{x_0,\dots, x_{n-1}}$ 上取值所组成的「值向量」。
   
 $$
