@@ -32,7 +32,7 @@ zkVM 作为一种结合零知识证明（Zero-Knowledge Proof, ZKP）和虚拟�
 
 1. [Lita - zkVM](https://www.lita.foundation/blog/zero-knowledge-paradigm-zkvm)
 2. [RiscZero - zkVM](https://dev.risczero.com/api/zkvm)
-3. [SP1 - zkVM](https://docs.succinct.xyz/docs/introduction)
+3. [SP1 - zkVM](https://docs.succinct.xyz/docs/sp1/introduction)
 4. [awesome-zkvm](https://github.com/rkdud007/awesome-zkvm?tab=readme-ov-file)
 5. [zkMIPS](https://learnblockchain.cn/column/99)
 6. [All about zkVM by Stephen Duan](https://oxidized-relation-91c.notion.site/All-about-zkVM-112f0a489b988062b4b8c51f825c2f4e)
@@ -56,7 +56,7 @@ zkVM 作为一种结合零知识证明（Zero-Knowledge Proof, ZKP）和虚拟�
   - 课件：[Jolt & Lasso: for Newbies](https://doutv.notion.site/Jolt-Lasso-for-Newbies-1591aee049b480b7a44ad7d00e3e9265?pvs=4)
   - 推荐阅读：[Lasso + Jolt - YouTube](https://www.youtube.com/playlist?list=PLjQ9HCQMu_8xjOEM_vh5p26ODtr-mmGxO)
     - [Binius: highly efficient proofs over binary fields](https://vitalik.eth.limo/general/2024/04/29/binius.html)
-    - [Jolt - JoltBook](https://jolt.a16zcrypto.com/how/jolt.html)
+    - [Jolt - JoltBook](https://jolt.a16zcrypto.com/intro.html)
     - [Jolt R1CS - How + why we rewrote Circom in Rust 🦀](https://x.com/samrags_/status/1820429579787423759?s=46) | Sam Ragsdale
     - [A Technical Dive into Jolt: The RISC-V zkVM](https://www.zksecurity.xyz/blog/posts/how-jolt-works/)
     - [往期 jolt 学习小组视频](https://github.com/Antalpha-Labs/zkp-academy/issues/1)
