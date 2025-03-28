@@ -116,7 +116,7 @@ FRI 是一种基于 Reed-Solomon 码的交互式证明系统，能为零知识�
 
 【第一周课程安排】
 - 第一节课：lambda class版zk-stark实现
-  - 预习材料： 阅读lambda class版zk-stark的[理论和实现流程](https://lambdaclass.github.io/lambdaworks/starks/recap.html)，有余力的可以看看[代码实现](https://github.com/lambdaclass/lambdaworks/tree/main/provers/stark)，领航员: 饭卡，时间：星期二，晚上8点
+  - 预习材料： 阅读lambda class版zk-stark的[理论和实现流程](https://lambdaclass.github.io/lambdaworks/starks/recap.html)，有余力的可以看看[代码实现](https://github.com/lambdaclass/lambdaworks/tree/main/crates/provers/stark)，领航员: 饭卡，时间：星期二，晚上8点
   - 课程回放：[Youtube 链接](https://youtu.be/wEIiSuaMH4o)
 - 第二节课：Plonky3 two_adic_pcs概述
   - 预习材料：
@@ -146,7 +146,7 @@ FRI 是一种基于 Reed-Solomon 码的交互式证明系统，能为零知识�
   1. [Winterfell - FRI](https://github.com/facebook/winterfell)
   2. [RiscZero - FRI](https://github.com/risc0/risc0/blob/main/risc0/zkp/src/prove/fri.rs)
   3. [how to code fri from scratch](https://blog.lambdaclass.com/how-to-code-fri-from-scratch/)
-  4. lambda class版zk-stark （[理论](https://lambdaclass.github.io/lambdaworks/starks/recap.html), [代码](https://github.com/lambdaclass/lambdaworks/tree/main/provers/stark)）
+  4. lambda class版zk-stark （[理论](https://lambdaclass.github.io/lambdaworks/starks/recap.html), [代码](https://github.com/lambdaclass/lambdaworks/tree/main/crates/provers/stark)）
 
 **第三 part 作业**：[Plonky3-fri](https://github.com/Antalpha-Labs/zkp-academy/discussions/58)
 
