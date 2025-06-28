@@ -1,0 +1,67 @@
+01 NTT数论变换
+
+02 不止butterfly
+
+03 why & how
+
+04 NTTs == FFTs?
+FFT是为了计算DFTs
+FFT NTT在很多地方指一个东西
+
+05 Motivation：提高模多项式乘法，商环多项式乘法的操作效率
+
+07 多项式乘法Y=G*H，假设G,H都是d-1度
+
+08-10 基本乘法计算和问题：多项式结果的度为2d-2；复杂性：O(n^2)
+
+11 y[k]=(g*h)[k]=Σg[i]*h[k-i], i∈[0,k] （离散线性卷积）
+当i或k-i超出最终Y的长度（2d-1），相关项就不计算了
+
+解决度为2d-2，无法处理边界的问题：
+14 多项式环: 取模φ(x)
+
+15 循环卷积(CC) wraps around
+与上面p11的线性卷积不同，取模后有了周期
+这里计算c=a*b：
+a和b都补齐n次
+c[k]分为2项计算，第1项类似p11，第2项是i大于k之后，wrap计算直到i=n
+
+16 在Zq[X]/(x^n-1)称为positive，Zq[X]/ (x^n+1) 称为negtive
+
+17 PWC/NWC的不同在于计算c[k]的第二项的±不同
+
+解决复杂性：O(n^2)太慢的问题
+19 卷积（convolution） 理论。一个域中的卷积=另一个域中的点×
+所以，把2个多项式系数向量转为NTT，点乘，然后把结果变回多项式即可
+
+20 NTT的好属性。 转换NTT后还可可保持随机多项式的randomness，保持dimension和bit长度
+
+21-22 NTT iNTT的转换计算
+多项式系数向量a的NTT向量：NTT(a)
+iNTT向量的计算：乘以n的逆，w^-ij是模q下的w^ij的逆元
+w是n维原根 w^n=1 mod q
+
+23-24
+单位根在复平面上的单位圆上均匀分布，构成了圆周多项式的根，这些圆周多项式(cyclotomic polynomials)是多项式 x^n −1 的一个因式
+图中的3个点是1的三个单位根
+
+25 例子 2^8 mod 17 =1 , 所以2是8次原根 unity
+
+26-28 FFT trick 基于CRT（环版本）简化多项式乘法
+定理核心：R：环，Ii：互素的理想，I是理想的交集，那么模I下的元素可以分解为模Ii元素的乘积
+例如：R：整数环，I1=2的倍数集合，I2=3的倍数集合，模6整数可分解为模2和模3整数乘积
+FFT即使用了类似分解，方根求解到最后，高次递归到线性多项式
+
+29 公式10,11即上述CRT正向分解和逆向映射公式
+
+30-31 CT butterfly 公式10
+
+32 GS butterfly 公式11
+
+33
+NTT ct no-bo 自然顺序转bit顺序，这里bit顺序(bo)不是0-7是因为输出的顺序是这样
+INTT GS  bo-no
+
+34 NTT的算法应用
+NTT友好：Kyber：Zq [x]/(x^n+1)，Dilithium:Zq [x]/(x^n+1)，Falcon:Zq [x]/(x^n+1)
+不友好：Saber，NTRU Prime
