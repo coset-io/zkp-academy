@@ -1,0 +1,79 @@
+主题：Ajtai承诺和承诺打开的证明
+内容：
+承诺： 1）SIS，2）Chor-Rivest 哈希，3）Ajtai承诺的binding& hiding
+证明： 1）协议，2）安全性：HVZK和知识soundness（relaxed），如果不考虑ZK
+
+1 SIS/M-SIS回顾：找到Az=0，z是足够小的m维向量，A是n*m矩阵
+
+2 Chor-Rivest Hash
+key是n×m的矩阵A，消息是m维比特向量x
+Hash函数：fA(x)=Ax mod q
+压缩性：因为n<m, 2^m>q^n
+抗碰撞性：首先，y=fA(x)=Ax；若找到x'≠ x，且fA(x')=Ax'=y，那么：A(x'-x)=0
+若(x'-x)非零，那么可以找到SIS的解(x'-x)，归结到SIS问题
+
+3 C-R Hash可以应用到Ajtai承诺构造
+单bit版本：
+Keygen/Setup： 选择 pk=A∈Z（n×m矩阵）
+Commit (u, pk): 承诺1bit u，随机选择(m-1)×1向量r←Dσ，计算com= A * [u,r]^T mod q
+Open(u,r,com,pk)：计算得到{0,1}
+
+binding性质证明：
+首先，com:=commit(u,pk)；然后，要找到u',r', 使得 commit(u', pk)=com
+同上抗碰撞证明，可归约到SIS m,n,q,2β 问题
+
+hiding性质证明（Pr[u=0]=Pr[u=1] ，即无法从com中区分承诺的是0还是1）：
+将矩阵A分解为[a0 | A']，a0是 A 的第一列(n×1)，A′是剩余的 n×(m−1) 子矩阵
+那么，com=[a0 | A'] * [u,r]^T=a0 u + A'r
+当 u=0 时，com=A′r mod q (可看做A'的SIS格 ={r∈Z^(m-1)| A'r=com mod q})
+当 u=1 时，com=a0+A′r mod q (可看做上述SIS格的偏移: a0+L)
+第3课讲到的用高斯分布平滑参数s可做到L和c+L采样分布不可区分，因此，u=0和1也无法区分
+
+同理，多bit version的承诺形式如下：
+com=A1m+A2r
+
+4 证明commitment的open正确即不能打开成别的值（binding）
+
+Shnorr零知识协议: 证明P知道x满足g^x=X，协议满足zk和soundness，协议如下
+P					V
+选随机数y, 计算g^y=Y (Ay=w)		→	
+计算z=y+xc 			←	选随机挑战值c
+发送z				→	使用Y(w)，z，c验证g^z=YX^c (Az=w+tc)
+Shnorr可改为Ajtai格版本（见协议的括号部分）：A* [u,r]^T=com =t ∈Rq^n    (即Ax=t)
+格版本将Shnorr的计算进行了转换：幂次->乘法，乘法->加法，证明P知道x满足Ax=t
+
+在Ajtai中，y是如何选取的很关键。y←Dσ，故y较小，c是small norm通常也小，x也小（||x||<=2β），故z=y+xc 也小，那么P要伪造z就不容易
+
+5 协议安全性
+knowledge soundness的证明
+这里是relaxed版本，秘密x*可以满足一些要求，但有损失：若P*能伪造一个证明 （z，c，w），那么可以构造一个提取器E，提取出x，使得 Ax=t，且||x||∞<=2β
+用rewinding的方法提取：
+P*		V
+w      		
+		c
+z
+倒带：
+P*		V
+w      		
+		c’
+z’
+根据协议有：Az=w+ct，Az'=w+c't（倒带后）
+那么有，A(z-z')=(c-c')t，令x*=(z−z′)/(c−c′) ，则 Ax*=t（要求(c-c')≠0，(c-c')可逆，逆元的范数<B）
+||z||<B，||z-z′||<2B，x*<Bz，满足||x||∞<2β＜Bz
+
+HVZK的证明（诚实验证者HV总是按照特定程序抛硬币，故可模拟V的行为得到c）
+z=y+xc 
+y是从高斯分布Dσ采样得到，z是y加上xc后的偏移，如果攻击者能观察到多个z，且知道y的分布，那么就能观察到xc的一些信息（泄露x）
+为了防止上述问题，采用拒绝采样技术：
+拒绝采样：保留偏移和偏移前的重叠部分，拒绝/去掉偏移部分，就不会泄露xc
+通过离散高斯分布的拒绝采样：可以保证z看起来像从某个离散高斯分布中采样的
+协议的proof是w,z,c，其中，w=Ay与z没有直接关系, y，w都是高斯分布随机采样（在某个范围内均匀），z应用拒绝采样后是平滑分布（统计不可区分）, c是HV的随机数，故x不会泄露
+
+以上即Lyubashevsky 签名方案，x是私钥S，签名是z=y+Sc，验证者验证Az=w+ct，t=AS是公钥
+签名者使用拒绝采样技术确保z的分布符合目标分布（不可区分x，ZK），基于秘密S和随机y保证即使观察到多个签名也无法伪造一个新的签名z
+优化拒绝采样策略可减少签名大小，提高其紧凑性
+
+如果不考虑ZK，那么协议可简化，证明是relaxed版
+简化协议：P把z=xc发给V，V验证Az=ct即可（z不需要随机的y和c隐藏x）
+
+思路与Greyhound算法类似，Greyhound具有多项式承诺方案的特点，支持透明性、线性证明者、次线性验证者和多对数证明大小
