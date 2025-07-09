@@ -38,12 +38,12 @@
 【第一周课程安排】
 - 第一节课：Lattice Cryptography Overview & Why Lattice is the Future of PQ ZK Blockchain
   - 讲师：Kurt，时间：6 月 17 日晚 8 点（星期二）
-  - 课程回放：[YouTube视频链接](https://youtu.be/bhOPQe9UDxk) [Bilibili视频链接](https://www.bilibili.com/video/BV1MCNjzdEaz/)
+  - 课程回放：[YouTube视频链接](https://youtu.be/bhOPQe9UDxk)、 [Bilibili视频链接](https://www.bilibili.com/video/BV1MCNjzdEaz/)
   - 推荐阅读：[Lattice Wiki](https://wiki.lacom.io/)
   - 课件：[Slides](https://kurtpan666.github.io/KurtPan-Slides/2506-lattice-overview/Kurt%20Pan-Lattice-Overview-2506.pdf)
 - 第二节课：Lattice是什么 & average-case and worst-case hard problems
   - 讲师：Yingfei， 时间：6 月 19 日晚 8 点（星期四）
-  - 课程回放：[YouTube视频链接](https://youtu.be/wvCssFhn-rc) [Bilibili视频链接](https://www.bilibili.com/video/BV19cNCzuEG3/)
+  - 课程回放：[YouTube视频链接](https://youtu.be/wvCssFhn-rc)、 [Bilibili视频链接](https://www.bilibili.com/video/BV19cNCzuEG3/)
   - 课件：[Lattice-1](https://github.com/coset-io/zkp-academy/blob/main/lattice/slides/Lattice-1.pdf)
   - 推荐阅读：Chapter 1 & 2, [Lattice Based Cryptography for Beginners](https://eprint.iacr.org/2015/938.pdf)
 - 答疑：周六晚8点 [YouTube视频](https://youtu.be/xEXm5crprbI)
@@ -52,7 +52,7 @@
 
 - 第三节课：Discrete Gaussians, Rejection Sampling, Rings and Modules 
   - 讲师：Yingfei， 时间：6 月 24 日晚 8 点（星期二）
-  - 课程回放：[YouTube视频链接](https://youtu.be/cMIiD4tmdVg) [Bilibili视频链接](https://www.bilibili.com/video/BV1UMKLz9Eoo/)
+  - 课程回放：[YouTube视频链接](https://youtu.be/cMIiD4tmdVg)、 [Bilibili视频链接](https://www.bilibili.com/video/BV1UMKLz9Eoo/)
   - 推荐阅读：
     - Chapter 3, [Lattice Based Cryptography for Beginners](https://eprint.iacr.org/2015/938.pdf)
     - The Mathematics of Lattice-Based Cryptography, [Cryptography 101](https://cryptography101.ca/lattice-based-cryptography/)
@@ -60,7 +60,7 @@
   - 课件：[Lattice-2](https://github.com/coset-io/zkp-academy/blob/main/lattice/slides/Lattice-2.pdf)
 - 第四节课：Why NTT and how it works
   - 讲师：Bing，  时间：6 月 26 日晚 8 点（星期四）
-  - 课程回放：[YouTube视频链接](https://youtu.be/94c3I3uXp6A) [Bilibili视频链接](https://www.bilibili.com/video/BV18NKfz1E5Z/)
+  - 课程回放：[YouTube视频链接](https://youtu.be/94c3I3uXp6A)、 [Bilibili视频链接](https://www.bilibili.com/video/BV18NKfz1E5Z/)
   - 课件：[NTT](https://github.com/coset-io/zkp-academy/blob/main/lattice/slides/NTT.pdf)
   - 推荐阅读：
     - [Multidigit Multiplication For Mathematicians](https://cr.yp.to/papers/m3-20010811-retypeset-20220327.pdf),
@@ -72,12 +72,12 @@
 
 - 第五节课：Ajtai Commitment and Lyubashevsky Signature/Proofs
   - 讲师：Yingfei，  时间：7 月 1 日晚 8 点（星期二）
-  - 课程回放：[Youtube视频链接](https://youtu.be/VSFvwAKYWq0) [Bilibili视频链接](https://www.bilibili.com/video/BV11q3szWEw2/)
+  - 课程回放：[Youtube视频链接](https://youtu.be/VSFvwAKYWq0)、 [Bilibili视频链接](https://www.bilibili.com/video/BV11q3szWEw2/)
   - 推荐阅读：Chapter 5, [Basic Lattice Cryptography](https://eprint.iacr.org/2024/1287.pdf)
   - 课件：[Lattice-3](https://github.com/coset-io/zkp-academy/blob/main/lattice/slides/Lattice-3.pdf)
 - 第六节课：Building SNARKs
   - 讲师：高老师，时间：7 月 3 日晚 8 点（星期四）
-  - 课程回放：[Youtube视频链接](https://youtu.be/tS5f6UtJ8PQ) [Bilibili视频链接](https://www.bilibili.com/video/BV1hB3gz4Eur/)
+  - 课程回放：[Youtube视频链接](https://youtu.be/tS5f6UtJ8PQ)、 [Bilibili视频链接](https://www.bilibili.com/video/BV1hB3gz4Eur/)
   - 课件：[Building SNARKs](https://github.com/coset-io/zkp-academy/tree/main/lattice/slides/6.Building_SNARKs.pdf)
   - 推荐阅读：[How to Make SNARKs](https://www.youtube.com/watch?v=KjkIQLJk4eQ)
 - 答疑：周六晚上 8 点
@@ -87,7 +87,7 @@
 
 - 第七节课：Realizing Polynomial Commitment Schemes
   - 讲师：高老师， 时间：7 月 8 日晚 8 点（星期二）
-  - 课程回放：
+  - 课程回放：[Youtube视频链接](https://youtu.be/TP6jpY3uiao)、 [Bilibili视频链接](https://www.bilibili.com/video/BV1fzG4z9Ezw/)
   - 课件：[Realizing PCS](https://github.com/coset-io/zkp-academy/tree/main/lattice/slides/7.Realizing_PCS.pdf)
   - 推荐阅读：[MLE-PCS: Comparison of MLE-PCS (Final Report)](https://github.com/sec-bit/mle-pcs/blob/main/final-report.md)
 - 第八节课：LaBRADOR
