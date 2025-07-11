@@ -92,7 +92,7 @@
   - 推荐阅读：[MLE-PCS: Comparison of MLE-PCS (Final Report)](https://github.com/sec-bit/mle-pcs/blob/main/final-report.md)
 - 第八节课：LaBRADOR
   - 讲师：高老师， 时间：7 月 10 日晚 8 点（星期四）
-  - 课程回放：
+  - 课程回放：[Youtube视频链接](https://youtu.be/4JmlaYgUiw0)、 [Bilibili视频链接](https://www.bilibili.com/video/BV1jWuTzpELX/)
   - 课件：[LaBRADOR](https://github.com/coset-io/zkp-academy/tree/main/lattice/slides/8.LaBRADOR.pdf)
   - 推荐阅读：[LaBRADOR: Compact Proofs for R1CS from Module-SIS](https://eprint.iacr.org/2022/1341.pdf)
 - 答疑：周六晚上 8 点
