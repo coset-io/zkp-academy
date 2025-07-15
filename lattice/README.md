@@ -107,26 +107,23 @@
   - 课程回放：
   - 课件：[Greyhound](https://github.com/coset-io/zkp-academy/tree/main/lattice/slides/9.Greyhound.pdf)
   - 推荐阅读：[Greyhound: Fast Polynomial Commitments from Lattices](https://eprint.iacr.org/2024/1293.pdf)
-- 第十节课：格密碼分析初步
+
+- 第十节课：Lattice ZKP Implementation : Lantern, Lattirust and Labrador & Greyhound PoC
   - 讲师：Kurt，时间：7 月 17 日晚 8 点（星期四）
+  - 参考资料：https://lattice-zk.isec.tugraz.at/ https://github.com/lattirust/lattirust/
+  - 课程回放：
+  - 课件：
+ 
+- 答疑：周六晚上 8 点
+
+【第六周课程安排】
+
+- 第十一节课：格密碼分析初步
+  - 讲师：Kurt，时间：7 月 22 日晚 8 点（星期二）
   - 参考资料：https://wiki.lacom.io/wiki/fpylll 
   - 课程回放：
   - 课件：
   - 推荐阅读：
-- 答疑：周六晚上 8 点
-
-
-【第六周课程安排】
-
-
-- 第十一节课：Lattice ZKP Implementation : the Past, Now and the Future
-  - 讲师：Kurt，时间：7 月 22 日晚 8 点（星期二）
-  - 参考资料：
-  - 课程回放：
-  - 课件：
-  - 推荐阅读：https://lattice-zk.isec.tugraz.at/
-
-
 
 
 
