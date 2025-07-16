@@ -104,7 +104,7 @@
 
 - 第九节课：Greyhound
   - 讲师：高老师，时间：7 月 15 日晚 8 点（星期二）
-  - 课程回放：
+  - 课程回放：[Youtube视频链接](https://youtu.be/DWTp4MmSCc4)、 [Bilibili视频链接](https://www.bilibili.com/video/BV1B5uxz3Et7/)
   - 课件：[Greyhound](https://github.com/coset-io/zkp-academy/tree/main/lattice/slides/9.Greyhound.pdf)
   - 推荐阅读：[Greyhound: Fast Polynomial Commitments from Lattices](https://eprint.iacr.org/2024/1293.pdf)
 
