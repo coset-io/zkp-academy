@@ -110,9 +110,9 @@
 
 - 第十节课：Lattice ZKP Implementation : Lantern, Lattirust and Labrador & Greyhound PoC
   - 讲师：Kurt，时间：7 月 17 日晚 8 点（星期四）
-  - 参考资料：https://lattice-zk.isec.tugraz.at/ https://github.com/lattirust/lattirust/
+  - 参考资料：https://lattice-zk.isec.tugraz.at/ https://github.com/lattirust/lattirust/ https://github.com/NethermindEth/latticefold https://hackmd.io/@Ingonyama/fast-labrador-prover
   - 课程回放：
-  - 课件：
+  - 课件：https://wiki.lacom.io/wiki/cryptography/greyhound-poc
  
 - 答疑：周六晚上 8 点
 
