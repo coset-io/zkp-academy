@@ -1,0 +1,93 @@
+Author：MT
+https://github.com/mountaintower/learningzkp
+
+1 概述
+Geryhound是基于Lattice 的PCS
+LaBRADOR 是基于Lattice的SNARKs，所以先介绍SNARKs
+
+2 SNARKs：简洁非交互式知识论证
+计算完整性的密码学证明，关键是达到short proof和快速验证
+所以达不到perfect soundness，但可以computational soundness
+1990s起源，是计算复杂性（概率证明）和密码学（高效论证）的交集
+
+3 区块链应用：Layer2区块链交易验证
+例以太坊需要计算f(x)=v（Layer1），那么区块链做计算需要大量gas，所以现在生成π可以让区块链矿工验证代价比较小
+
+4 SNARGs：简洁非交互式论证
+SNARK是Knowledge的SNARG，因此是SNARG的特例
+ARGuments论证：既要简洁Succinct又要能证明witness，一般不可能，所以需要relax，称为argument
+Knowledge知识：可以用rewind extract 秘密，证明w的存在性，比证明拥有w是更强的性质。
+P和V的时间size分别是poly(T)和poly(T)/poly(|F|+|x|+logT) （V的验证是快速的）
+π的大小是short的：poly（logT）
+Setup有不同类型：
+公开/透明setup: 如Hash(r),g1,g2=H(g2),g3=H(g2)
+隐私setup: universal setup(只与T有关),specific(与F,T都有关，换个F就要换setup了，但效率更高）
+
+5 SNARKs的构造范式所基于的（信息论）模型
+可以用V的能力区分模型：
+oracle access：V可以读其中的几位（P的信息）
+randomness：V是随机读的
+interaction：P V 多次交互+public coins可以转换为非交互
+multi-P：多P之间是隔离的，因此限制了P作恶的能力
+
+6 模型
+PCP概率验证证明:P发一次，V读几次就结束（不交互很多次）
+IP交互证明：交互信息
+IOP：P发oracle，V读，交互，多轮PCP的Oracle交互
+MIP：V必须读整个msg，而不是oracle
+MIOP: 全部考虑
+
+7 模型
+oracle的种类：
+简单版：point 查询
+多项式评估查询
+tensor查询
+线性查询：f和v向量相乘
+
+8 模型
+MIP：不实用
+IP：作为一个子程序用
+PCP：不实用
+IOP：用的更多，基础
+
+9 PCPs
+PCP：P只发一个msg，V的验证是随机的（通过oracle查询msg的少量位），没有更多交互
+PCP并不是简洁论证，msg的长度还是polyT
+为何需要实现oracle：
+Prover 可针对 Verifier 的每一次查询即时重新生成不同的msg，使所有局部答案一致，从而欺骗验证V，因此需要把msg绑定成固定不变的字符串，可检测到篡改
+可以将消息的每一位做成merkle树的叶子，计算root hash，供V查询
+
+10 效率问题
+基于PCP的SNARGs的argument size：10s of MBs，并且当T很大的时候（电路规模大）也相当大，如今的进展也很缓慢
+但PCP的linear 查询是高效的，如Groth16可以达到O(1)大小的验证
+
+11 IOPs
+IOP：随机，交互，oracle访问
+
+有了模型（如IOP）（规定理想世界中如何交互、查询，保证可靠性）
+再加上密码编译器（PCS，如KZG,FRI,BulletProof等），就可以将模型中的Oracle查询commit、压缩成现实世界里的short的非交互式证明
+
+12 构造IOP
+16-20年进展很多：拟线性时间ZK，线性大小proof，线性时间P，IOPP线性时间临近证明，高效实现..
+新技术：proof组合，单变量sumcheck（但不是我们讲的sumcheck）等
+总之，IOP不仅降低了复杂度，在实现上（真实电路规模）的效率也大幅提高
+
+13 证明模型的密码学实现
+概率证明+密码编译器+代表性SNARK系统
+选型关注点
+• 计算模型：电路 vs 机器machine
+• 密码学成本：Prover 时间、Verifier 时间、证明大小
+• 量子抗性：pre / post-quantum
+• Setup：公开，特定，通用
+linear PCP (and 2-message linear IP)，linear encoding，[G10][L11][BCIOP13]
+[GGPR13][PGHR13][G16][GM17]…
+PCP and IOP，vector commitment，Ligero, Aurora, Fractal, SCI, STARK, ...
+关注点：多项式PCP&IOP，多项式承诺，代表系统：Sonic, Marlin, Plonk, Spartan, Supersonic-RSA, Hyrax, vSQL, vRAM, Libra, ...
+
+14 多项式IOP
+P发多项式，V发查询多项式值
+也支持多变量多项式
+
+15 PCS关系
+用多项式承诺也可以实现Oracle（就像上面说的Merkle树）
+P发多项式承诺F，V对z1点的多项式值做查询，P返回多项式值v和证明π，证明承诺和值计算关系都是合法的
