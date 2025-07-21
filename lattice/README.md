@@ -120,10 +120,22 @@
 
 - 第十一节课：格密碼分析初步
   - 讲师：Kurt，时间：7 月 22 日晚 8 点（星期二）
-  - 参考资料：https://wiki.lacom.io/wiki/fpylll 
+  - 参考资料：https://wiki.lacom.io/wiki/fpylll Refs:
+- [A Gentle Tutorial for Lattice-Based Cryptanalysis](https://eprint.iacr.org/2023/032)
+- [Linear algebra and lattice reduction in Sage](https://defeo.lu/sage-lattices-EJCIM/)
+- [Cryptanalysis on Lattice-Based Cryptography](https://hackmd.io/@Giapppp/BJ4wfpZST)
+- [Using Lattices for Cryptanalysis](https://simons.berkeley.edu/sites/default/files/docs/14975/cryptanalysis.pdf)
+- [Solving Hidden Number Problem with One Bit Oracle and Advice](https://www.iacr.org/archive/crypto2009/56770333/56770333.pdf)
+- [Sage for Lattice-based Cryptography](https://www.maths.ox.ac.uk/system/files/attachments/sage-introduction.pdf)
+- https://www.latticechallenge.org/
+- https://lattice-estimator.readthedocs.io/en/latest/
+- [The GGH Cryptosystem](https://kel.bz/post/lattices/)
+- [Building Lattice Reduction (LLL) Intuition](https://kel.bz/post/lll/)
+- [LLL algorithm](https://www.youtube.com/watch?v=vREqxm0j784)
+- COMPLEXITY OF LATTICE PROBLEMS: A Cryptographic Perspective Ch2
+- Mathematics of Public Key Cryptography. Version 2.0 by Steven D Galbraith
   - 课程回放：
   - 课件：
-  - 推荐阅读：
 
 
 
