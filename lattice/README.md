@@ -120,7 +120,7 @@
 
 - 第十一节课：格密碼分析初步
   - 讲师：Kurt，时间：7 月 22 日晚 8 点（星期二）
-  - 参考资料：https://wiki.lacom.io/wiki/fpylll Refs:
+  - 参考资料：https://wiki.lacom.io/wiki/fpylll 
 - [A Gentle Tutorial for Lattice-Based Cryptanalysis](https://eprint.iacr.org/2023/032)
 - [Linear algebra and lattice reduction in Sage](https://defeo.lu/sage-lattices-EJCIM/)
 - [Cryptanalysis on Lattice-Based Cryptography](https://hackmd.io/@Giapppp/BJ4wfpZST)
