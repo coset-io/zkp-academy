@@ -135,7 +135,7 @@
 - COMPLEXITY OF LATTICE PROBLEMS: A Cryptographic Perspective Ch2
 - Mathematics of Public Key Cryptography. Version 2.0 by Steven D Galbraith
   - 课程回放：
-  - 课件：
+  - 课件：https://wiki.lacom.io/wiki/cryptanysis/cryptanysis-sage-101/
 
 
 
