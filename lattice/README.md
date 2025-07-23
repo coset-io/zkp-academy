@@ -134,7 +134,7 @@
 - [LLL algorithm](https://www.youtube.com/watch?v=vREqxm0j784)
 - COMPLEXITY OF LATTICE PROBLEMS: A Cryptographic Perspective Ch2
 - Mathematics of Public Key Cryptography. Version 2.0 by Steven D Galbraith
-  - 课程回放：
+  - 课程回放：[Youtube视频链接](https://youtu.be/i7vxP1B2MNo)、 [Bilibili视频链接](https://www.bilibili.com/video/BV1PFbfz8EJd/)
   - 课件：https://wiki.lacom.io/wiki/cryptanysis/cryptanysis-sage-101/
 
 
