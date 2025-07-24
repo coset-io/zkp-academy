@@ -140,7 +140,7 @@
 - 加餐分享：A New Approach for LPN-based Pseudorandom Functions: Low-Depth and Key-Homomorphic
   - 讲师：Youlong Ding，时间：7 月 24 日晚 8 点（星期四）
   - 课程回放：
-  - 课件：https:/dl.acm.org/doi/1 0.1145/3717823.3718210
+  - 课件：https://eprint.iacr.org/2025/898.pdf
 
 
 【课后作业】
