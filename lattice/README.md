@@ -166,7 +166,7 @@
 
 - 值得一提的是，本次我们还鼓励大家成为 Lattice 发展的早期贡献者，为 Lattice 的未来发展添砖加瓦！对此，我们将会给予一定 bounty 的奖励，主要有以下两个方向：
 
-「共建 Lattice Wiki」 🔗：https://wiki.lacom.io/
+「共建 Lattice Wiki」 🔗：[lawiki](https://lattice.zkpunk.pro/)
 
 「Lattice 工程化实现」🔗：https://github.com/lattice-complete/Lazarus
 
